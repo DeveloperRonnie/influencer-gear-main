@@ -54,7 +54,20 @@ body{
 .home-info h1{
     font-size: 55px;
     font-weight: bold;
+    animation-name: slidein;
 }
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
+
 .home-info p{
     font-size: 16px;
     color: #3A3A3A;
@@ -72,6 +85,13 @@ body{
     z-index: 1;
 }
 /*======= Header Section ======= */
+
+.nav-toggle-icon {
+    display: none;
+}
+
+
+
 #header{
     margin-top: 50px;
 }
@@ -135,6 +155,7 @@ main{
     height: 414px;
 }
 
+
 /*======= Brand Logos ======= */
 .brand-logos{
     display: flex;
@@ -163,6 +184,32 @@ main{
 .collection-items img{
     width: 100%;
 }
+
+.star-filled{
+    color:#FB8200 ;
+}
+.star-empty{
+    color:#FB8200 ;
+}
+.coll-info h3{
+    color:#000000 ;
+    font-size: 28px;
+    padding: 5px 0;
+}
+
+.coll-info h4{
+    color:#000000 ;
+    font-weight: 200;
+    font-size: 24px;
+    padding: 5px 0;
+}
+.coll-info h5{
+    color:#787885 ;
+}
+
+
+
+
 
 
 /* Contacts Section */
@@ -246,124 +293,120 @@ main{
 
 /* responsive  */
 
-@media (max-width:991px) {
-    .home-main {
-        grid-template-columns: repeat(2, 1fr);
-        height: fit-content;
-        width: 100%;
+@media  (min-width:769px) and (max-width:1024px) {
+    #home{
+        margin-top: 40px;
     }
-    .banner-area-left {
-        width: 100%;
-        text-align: center;
+    .home-info{
+    
     }
-    .banner-area-left .title {
-        font-weight: 400;
-        font-size: 42px;
+    
+    .home-info h1{
+        font-size: 35px;
+        font-weight: bold;
     }
-    .banner-area-left p {
-        font-weight: 400;
+    .home-info p{
         font-size: 12px;
-        line-height: 1.8;
-        margin: 10px 0;
+        color: #3A3A3A;
+        padding-bottom: 30px;
     }
-    .header-btn {
-        margin: 0 auto;
+    
+    .home-right{
+        position: relative;
+        padding-left: 20px;
+        
     }
-    .banner-area-right {
-        width: auto;
-        margin: 0 auto;
-    }
-    .popular-collections {
-        grid-template-columns: repeat(2, 1fr);
-        height: fit-content;
-    }
-    .collections {
-        margin: 0 auto;
-    }
-    .collections-image img {
-        width: 300px;
-        height: 256px;
-        border-radius: 5px;
-    }
-    .see-more {
-        text-align: center;
-        margin-top: 15px;
-    }
-    .message-me {
-        grid-template-columns: repeat(1, 1fr);
-        height: fit-content;
-    }
+   .home-bg-image img,
+   .home-product-image img{
+       width: 80%;
+   }
+   #collection{
+    padding-bottom: 120px;
+   }
+   .collection-items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 2%;
+}
+   /*======= Brand Logos ======= */
+    .brand-logos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 16px 30px;
+    border: 1px solid skyblue;
+}
+.logo img{
+    width: 50px;
 }
 
-@media (max-width:600px) {
-    .banner-area {
-        grid-template-columns: 1fr;
-        height: fit-content;
-        width: 100%;
-    }
-    .banner-area-left {
-        width: 100%;
-        text-align: center;
-    }
-    .banner-area-left .title {
-        font-weight: 300;
-        font-size: 32px;
-    }
-    .banner-area-left p {
-        font-weight: 200;
-        font-size: 12px;
-        line-height: 1.8;
-        margin: 10px 0;
-    }
-    .header-btn {
-        margin: 0 auto;
-    }
-    .banner-area-right {
-        width: auto;
-        margin: 0 auto;
-    }
-    .popular-collections {
-        grid-template-columns: 1fr;
-        height: fit-content;
-    }
-    .collections {
-        margin: 0 auto;
-    }
-    .see-more {
-        text-align: center;
-        margin-top: 15px;
-    }
-    .message-me {
-        grid-template-columns: repeat(1, 1fr);
-        height: fit-content;
-        margin: 0 auto;
-    }
-    .message-form {
-        margin: 0 auto;
-    }
-    .nav-toggle-icon {
-        display: block;
-    }
-    .nav-navigaton {
-        position: absolute;
-        top: 20%;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        padding: 20px 0;
-        transform: translateY(-620px);
-        align-items: center;
-        background-color: #bb6384;
-        z-index: 2;
-    }
-    .nav-navigaton li a {
-        color: black;
-        width: 100%;
-    }
-    #nav-toggle:checked~.nav-navigaton {
-        transform: translateY(0px);
-    }
+.contact-img img{
+    width: 100%;
 }
+.message-me{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    
+}
+
+.nav-menu{
+    display: block;
+}
+
+
+}
+
+
+
+
+@media (min-width:600px) and (max-width:767px){
+   
+    .home-main{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 50px;
+    }
+    #home{
+        margin-top: 20px;
+    }
+   
+   #collection{
+    padding-bottom: 820px;
+   }
+   .collection-items{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 2%;
+}
+   /*======= Brand Logos ======= */
+    .brand-logos{
+    display: none;
+}
+
+.contact-img img{
+    width: 100%;
+}
+.message-me{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+
+
+
+.nav-toggle-icon {
+    display: block;
+}
+
+.nav-menu{
+    display: none;
+}
+
+
+
+}
+
 
 
 
