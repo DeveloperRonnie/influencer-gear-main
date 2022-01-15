@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 
 /* Default Styles */
+
+
 .container{
     padding: 0 120px;
 }
@@ -39,7 +41,7 @@ body{
 
 .see-more-button{
     text-align: right;
-    padding-top: 130px;
+    padding-top: 30px;
 
 }
 .home-main{
@@ -47,6 +49,8 @@ body{
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
 }
+
+
 
 #home{
     margin-top: 100px;
@@ -88,6 +92,9 @@ body{
     top: 20px;
     z-index: 1;
 }
+
+
+
 /*======= Header Section ======= */
 
 .nav-toggle-icon {
@@ -182,7 +189,7 @@ main{
     margin-top: 50px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    grid-gap: 2%;
+    grid-gap: 30px;
 }
 
 .collection-child{
@@ -223,7 +230,7 @@ main{
 
 /* Contacts Section */
 #contact{
-    margin-top: 100px !important;
+    margin-top: 50px !important;
 }
 
 
@@ -329,13 +336,11 @@ main{
    .home-product-image img{
        width: 80%;
    }
-   #collection{
-    padding-bottom: 120px;
-   }
+   
    .collection-items{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 2%;
+    grid-gap: 20px;
 }
    /*======= Brand Logos ======= */
     .brand-logos{
@@ -370,7 +375,7 @@ main{
 
 
 
-@media  (max-width:767px){
+@media screen and (max-width:767px){
    
     .home-main{
         display: grid;
@@ -384,13 +389,19 @@ main{
    .home-info h1{
        font-size: 25px !important;
    }
+   .home-info p{
+       font-size: 12px !important;
+   }
+   .home-info a{
+       font-size: 12px !important;
+   }
    #collection{
-    padding-bottom: 820px;
+    padding-bottom: 0px;
    }
    .collection-items{
     display: grid;
     grid-template-columns: repeat(1,1fr);
-    grid-gap: 2%;
+    grid-gap: 20px;
 }
    /*======= Brand Logos ======= */
     .brand-logos{
@@ -420,6 +431,14 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+
+
+.home-bg-image img,
+.home-product-image img{
+    width: 100%;
+}
+
+
 
 }
 
